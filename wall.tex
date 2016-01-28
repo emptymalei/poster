@@ -147,13 +147,25 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 \sin^2 2\theta_{23} & > 0.95 \\
 \sin^2 2\theta_{13} & = 0.095 \pm 0.010 \\
 \end{align}
-\item Masses
+\item Masses (fig \ref{fig:neutrino_mass_hierarchy})
 \begin{align}
 \Delta m_{12}^2 &= \Delta m_{sol}^2 = 7.53_{-0.18}^{+0.18} \times 10^{-5} \mathrm{eV}^2 \\
 \lvert\Delta m_{31}^2\rvert & = \Delta m_{atm}^2 = 2.44_{-0.06}^{+0.06}\times 10^{-3} \mathrm{eV^2}
 \end{align}
 
 \end{itemize}
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{assets/Neutrinos_figs_3nuspic.png}
+\caption{Neutrino mass hierarchy. J.~L.~Hewett {\it et al.} Fundamental Physics at the Intensity Frontier, arXiv:1205.2671.}
+\label{fig:neutrino_mass_hierarchy}
+\end{figure}
+
+
 
 \subsection{Nuclear Reactions}
 
@@ -164,7 +176,10 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 \caption{Feynman diagram of beta decay. The charged current weak interaction boson in this case is a $W^-$. Credit: Joel Holdsworth, within public domain.}
 \label{fig:Beta_Negative_Decay}
 \end{figure}
-i
+
+
+
+
 
 \begin{table}[ht]
 \centering
@@ -210,11 +225,88 @@ i
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{assets/neutrinoMixingAngle.png}
-\caption{Neutrino mixing. Blue states ($\{1,2\}$) are the VACUUM energy eigenstates while the orange states ($\{a,b\}$) are the flavor eigenstates. Blue: electron flavor; Red: the other flavor.}
+\caption{Neutrino mixing. Blue states ($\{1,2\}$) are the VACUUM energy eigenstates while the orange states ($\{a,b\}$) are the flavor eigenstates. Blue: flavor states; Red: propagation states.}
 \label{fig:neutrinoMixingAngle}
 \end{figure}
 
 
+\subsection{Hamiltonian and Basis}
+
+
+\subsubsection{Basis}
+
+Rotation from a Hamiltonian diagonalized basis wave function $\Psi_v$ to flavor basis wave function $\Psi_f$ is
+
+\begin{equation}
+\Psi_f = R_{d2f}(\theta_x) \Psi_d,
+\end{equation}
+
+where $d$ can be $v$ for vacuum eigenbasis, $m$ for matter eigenbasis and
+
+\begin{equation}
+R_{d2f}(\theta_x) = \begin{pmatrix} \cos\theta_d & \sin \theta_d \\ -\sin \theta_d & \cos \theta_d \end{pmatrix}.
+\end{equation}
+
+Matter mixing angle $\theta_m$ is determined through
+
+\begin{align}
+\sin 2\theta_m &= \frac{\sin 2\theta_v}{ \sqrt{ \left(\frac{\lambda}{\omega_v}\right)^2 + 1 - 2 \frac{\lambda}{\omega_v}\cos 2\theta_v } } , \\
+\cos 2\theta_m &= \frac{ \cos 2\theta_v - \lambda/\omega_v  }{ \sqrt{\left( \frac{\lambda}{\omega_v} \right) ^2  +1 - 2 \frac{\lambda}{\omega_v} \cos 2\theta_v } }, \\
+\tan 2\theta_m &= \frac{\sin 2\theta_m}{\cos 2\theta_m - \lambda/\omega_v} ,
+\end{align}
+
+where $\lambda = \sqrt{2}G_F n_e$.
+
+
+\subsubsection{Hamiltonian}
+
+With the appearance of matter perturbation $\lambda (x) = \lambda_0 + \delta \lambda(x)$ to the system, we have the Hamiltonian in vacuum basis
+
+\begin{equation}
+    \mathbf{H_v} =  {\color{blue} -\frac{\omega_v}{2} \sigma_3 }  { \color{red} + \frac{\lambda (x)}{ 2 } \cos 2\theta_v \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \sigma_1 } .
+\end{equation}
+
+In flavor basis,
+
+\begin{equation}
+    \mathbf{H_f} = {\color{blue}\frac{\omega}{2}( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )  } {\color{red} + \frac{\lambda(x)}{2} \mathbf {\sigma_3}}   .
+\end{equation}
+
+
+In background matter potential $\lambda_0$ basis
+
+\begin{equation}
+    \mathbf{H_{\bar m} } = -\frac{\omega_m}{2} \sigma_3 + \frac{\delta \lambda(x)}{2} \cos 2\theta_m \sigma_3 - \frac{\delta \lambda}{2} \sin 2\theta_m \sigma_1 ,
+\end{equation}
+
+where $\omega_m = \omega_v \sqrt{ \left( \frac{\lambda}{\omega_v} \right) ^2  +1 - 2 \frac{\lambda}{\omega_v} \cos 2\theta_v  }$.
+
+
+The caveat is the position/time dependence of the matter potential leads to position/time dependent transformation of the wave function which will cause an term in the Hamiltonian of the form
+
+\begin{equation}
+     - i \mathbf{U}^\dagger (x) \frac{\partial}{\partial x} \mathbf{U}(x).
+\end{equation}
+
+
+
+
+\subsubsection{Physics of Neutrino Oscillation}
+
+
+\begin{enumerate}
+    \item Nature of neutrino oscillation
+    \item MSW effect
+    \item Collective oscillation
+\end{enumerate}
+
+
+\subsubsection{Big Questions}
+
+\begin{enumerate}
+    \item Are neutrinos Majorana or Dirac?
+    \item What is the mass hierarchy?
+\end{enumerate}
 
 
 %%% Numerical
@@ -235,27 +327,6 @@ Check the code step by step:
 
 \verb+import this+
 
-\begin{enumerate}
-\item     Beautiful is better than ugly.
-\item     Explicit is better than implicit.
-\item     Simple is better than complex.
-\item     Complex is better than complicated.
-\item     Flat is better than nested.
-\item     Sparse is better than dense.
-\item     Readability counts.
-\item     Special cases aren't special enough to break the rules.
-\item     Although practicality beats purity.
-\item     Errors should never pass silently.
-\item     Unless explicitly silenced.
-\item     In the face of ambiguity, refuse the temptation to guess.
-\item     There should be one-- and preferably only one --obvious way to do it.
-\item     Although that way may not be obvious at first unless you're Dutch.
-\item     Now is better than never.
-\item     Although never is often better than *right* now.
-\item     If the implementation is hard to explain, it's a bad idea.
-\item     If the implementation is easy to explain, it may be a good idea.
-\item     Namespaces are one honking great idea -- let's do more of those!
-\end{enumerate}
 
 
 
