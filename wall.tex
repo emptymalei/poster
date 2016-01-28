@@ -73,20 +73,14 @@
 %%% Begin of Multicols-Enviroment
 \begin{multicols}{3}
 
-%%% Physics
+%%% General
 
-\section{Physics}
-
-\subsection{Dimensions}
+\section{General}
 
 
+\subsection{Units and Conventions}
 
-\subsection{Limits of The Results}
-
-
-\subsection{Good to Remember}
-
-\begin{itemize}
+\begin{enumerate}
 \item Energy and temperature: \begin{equation}
 \frac{1}{40}\mathrm{eV} = 300\mathrm{K} k_B .
 \end{equation}
@@ -95,7 +89,24 @@
 1\mathrm{fm}\times 197\mathrm{MeV}=\hbar c = 1.
 \end{equation}
 \item For light, energy 1eV corresponds to wavelength $1.24\mathrm{\mu m}$.
-\end{itemize}
+\item Pauli matrices are
+\begin{equation}
+    \sigma_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \sigma_2 = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix},\sigma_3 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\end{equation}
+\end{enumerate}
+
+
+
+
+\subsection{Check Results}
+
+\begin{enumerate}
+    \item Are the dimensions correct?
+    \item Does the limits of the result make sense?
+    \item Does the result make sense when the complexity of the system is removed?
+    \item Is it the right basis to draw a conclusion?
+\end{enumerate}
+
 
 
 
@@ -199,7 +210,7 @@ i
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{assets/neutrinoMixingAngle.png}
-\caption{Neutrino mixing. Blue states are the VACUUM energy eigenstates while the orange states are the flavor eigenstates. Blue: electron flavor; Red: the other flavor.}
+\caption{Neutrino mixing. Blue states ($\{1,2\}$) are the VACUUM energy eigenstates while the orange states ($\{a,b\}$) are the flavor eigenstates. Blue: electron flavor; Red: the other flavor.}
 \label{fig:neutrinoMixingAngle}
 \end{figure}
 
@@ -222,8 +233,10 @@ Check the code step by step:
 
 \subsection{Zen of Python}
 
+\verb+import this+
+
 \begin{enumerate}
-\item Beautiful is better than ugly.
+\item     Beautiful is better than ugly.
 \item     Explicit is better than implicit.
 \item     Simple is better than complex.
 \item     Complex is better than complicated.
