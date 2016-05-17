@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{multicol}
+\usepackage{xcolor}
+
 %\usepackage{fancybullets}
 
 \newtheorem{Def}{Definition}
@@ -105,7 +107,11 @@
     \item Does the limits of the result make sense?
     \item Does the result make sense when the complexity of the system is removed?
     \item Is it the right basis to draw a conclusion?
+    \item Have you double checked analytical expression with other people or Mathematica?
+    \item Have you checked numerical results with previously calculated simple results?
 \end{enumerate}
+
+
 
 
 
@@ -118,7 +124,7 @@
 
 \subsection{Equations of Motion}
 
-\begin{itemize}
+\begin{enumerate}
 \item Dirac Equation
 \begin{equation}
 i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
@@ -127,7 +133,7 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 \begin{equation}
 \frac {1}{c^2} \frac{\partial^2}{\partial t^2} \psi - \nabla^2 \psi + \frac {m^2 c^2}{\hbar^2} \psi = 0
 \end{equation}
-\end{itemize}
+\end{enumerate}
 
 
 
@@ -140,7 +146,7 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 
 \subsection{Fundamental Parameters}
 
-\begin{itemize}
+\begin{enumerate}
 \item Mixing angles
 \begin{align}
 \sin^2 2\theta_{12} & = 0.857 \pm 0.024 \\
@@ -153,15 +159,15 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 \lvert\Delta m_{31}^2\rvert & = \Delta m_{atm}^2 = 2.44_{-0.06}^{+0.06}\times 10^{-3} \mathrm{eV^2}
 \end{align}
 
-\end{itemize}
+\end{enumerate}
 
 
 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{assets/Neutrinos_figs_3nuspic.png}
-\caption{Neutrino mass hierarchy. J.~L.~Hewett {\it et al.} Fundamental Physics at the Intensity Frontier, arXiv:1205.2671.}
+\includegraphics[width=\columnwidth]{assets/neutrino-mass-theta23.png}
+\caption{Neutrino mass hierarchy. Mena, O., \& Parke, S. (2004). Unified graphical summary of neutrino mixing parameters. Physical Review D, 69(11), 117301.}
 \label{fig:neutrino_mass_hierarchy}
 \end{figure}
 
@@ -298,8 +304,21 @@ The caveat is the position/time dependence of the matter potential leads to posi
     \item Nature of neutrino oscillation
     \item MSW effect
     \item Collective oscillation
+    \item Gravitation effect on neutrino oscillations
+    \item Kinetic equation ($\nu\bar\nu$ pairing correlations?)
 \end{enumerate}
 
+
+\subsubsection{Applications of Neutrino Oscillation}
+
+
+\begin{enumerate}
+\item Supernova shock revive
+\item Accretion disc
+\item Cosmology
+\item {\color{darkgray}Tomography}
+\item {\color{gray}Detection of nuclear activities}
+\end{enumerate}
 
 \subsubsection{Big Questions}
 
@@ -313,19 +332,30 @@ The caveat is the position/time dependence of the matter potential leads to posi
 
 \section{Numerical}
 
-\subsection{Check You Code}
-Check the code step by step:
+\subsection{Limits}
 
-\begin{itemize}
-\item Vacuum oscillation amplitude and frequency
-\item Constant matter potential oscillation amplitude and frequency
-\item MSW resonance
-\end{itemize}
+\begin{enumerate}
+\item Simple cases where analytical is possible;
+\item Verified numerical calculations had previously.
+\end{enumerate}
+
 
 
 \subsection{Zen of Python}
 
 \verb+import this+
+
+
+\subsection{Check You Code (Neutrino)}
+Check the code step by step:
+
+\begin{enumerate}
+\item Vacuum oscillation amplitude and frequency
+\item Constant matter potential oscillation amplitude and frequency
+\item MSW resonance
+\end{enumerate}
+
+
 
 
 
