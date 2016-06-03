@@ -22,7 +22,13 @@
 %\definecolor{SectionCol}{rgb}{0,0,0.5}
 % uncomment for dark blue \section text 
 
-
+\newcommand{\ud}[1]{{#1^{\dagger}}}
+   \newcommand{\bra}[1]{\left\langle #1\right|}
+   \newcommand{\ket}[1]{\left| #1\right\rangle}
+   \newcommand\Tr{\mathrm{Tr}}
+   \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+   \newcommand{\avg}[1]{\left< #1 \right>}
+   
 
 
 
@@ -95,6 +101,14 @@
 \begin{equation}
     \sigma_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \sigma_2 = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix},\sigma_3 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
 \end{equation}
+\item Transformations of Pauli matrices
+
+\begin{align}
+\mathbf{U}^\dagger \sigma_3 \mathbf{U} &= \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 \\
+\mathbf{U}^\dagger \sigma_1 \mathbf{U} &= -\sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 \\
+\mathbf{U}^\dagger \sigma_2 \mathbf{U} &= \sigma_2.
+\end{align}
+
 \end{enumerate}
 
 
@@ -231,9 +245,64 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{assets/neutrinoMixingAngle.png}
-\caption{Neutrino mixing. Blue states ($\{1,2\}$) are the VACUUM energy eigenstates while the orange states ($\{a,b\}$) are the flavor eigenstates. Blue: flavor states; Red: propagation states.}
+\caption{Neutrino mixing. Blue states ($\{1,2\}$) are the VACUUM energy basis while the orange states ($\{a,b\}$) are the flavor basis. Blue: flavor basis; Red: propagation basis.}
 \label{fig:neutrinoMixingAngle}
 \end{figure}
+
+The two basis are related to each other through a unitary matrix $\mathbf{U}$,
+
+\begin{equation}
+     \begin{pmatrix}
+     \ket{\nu_e} \\
+     \ket{\nu_x}
+     \end{pmatrix} = 
+     \mathbf{U}
+     \begin{pmatrix}
+     \ket{\nu_1} \\
+     \ket{\nu_2}
+     \end{pmatrix},
+\end{equation}
+
+
+where
+
+\begin{equation}
+     \mathbf{U}=\begin{pmatrix}
+     \cos \theta & \sin \theta \\
+     -\sin \theta & \cos \theta
+     \end{pmatrix}.
+\end{equation}
+
+One thing to notice is that the relation of the amplitude has the same transformation
+
+\begin{equation}
+     \begin{pmatrix}
+     \psi_e \\
+     \psi_x
+     \end{pmatrix} = 
+     \mathbf{U}
+     \begin{pmatrix}
+     \psi_1 \\
+     \psi_2
+     \end{pmatrix},
+\end{equation}
+
+where the amplitude is define as the components of a state in a certain basis. 
+
+\begin{equation}
+     \ket{\Psi} = \begin{pmatrix}
+      \psi_e  & \psi_x
+     \end{pmatrix} \begin{pmatrix}
+     \ket{\nu_e} \\
+     \ket{\nu_x}
+     \end{pmatrix} =  \begin{pmatrix}
+      \psi_1  & \psi_2
+     \end{pmatrix} \begin{pmatrix}
+     \ket{\nu_1} \\
+     \ket{\nu_2}
+     \end{pmatrix}.
+\end{equation}
+
 
 
 \subsection{Hamiltonian and Basis}
@@ -250,7 +319,7 @@ Rotation from a Hamiltonian diagonalized basis wave function $\Psi_v$ to flavor 
 where $d$ can be $v$ for vacuum eigenbasis, $m$ for matter eigenbasis and
 
 \begin{equation}
-R_{d2f}(\theta_x) = \begin{pmatrix} \cos\theta_d & \sin \theta_d \\ -\sin \theta_d & \cos \theta_d \end{pmatrix}.
+R_{d2f}(\theta_x) = \begin{pmatrix} \cos\theta_x & \sin \theta_x \\ -\sin \theta_x & \cos \theta_x \end{pmatrix}.
 \end{equation}
 
 Matter mixing angle $\theta_m$ is determined through
@@ -331,6 +400,14 @@ The caveat is the position/time dependence of the matter potential leads to posi
 %%% Numerical
 
 \section{Numerical}
+
+\subsection{Writing Code}
+
+
+\begin{enumerate}
+\item Reduce quantities to dimensionless;
+\item Always calculate the corresponding value of reduced quantities in suitable units.
+\end{enumerate}
 
 \subsection{Limits}
 
