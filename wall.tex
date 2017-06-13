@@ -12,15 +12,15 @@
 \newtheorem{Def}{Definition}
 
 %\definecolor{BoxCol}{rgb}{0.9,0.9,0.9}
-% uncomment for grey background to \section boxes 
+% uncomment for grey background to \section boxes
 % for use with default option boxedsections
 
 %\definecolor{BoxCol}{rgb}{0.9,0.9,1}
-% uncomment for light blue background to \section boxes 
+% uncomment for light blue background to \section boxes
 % for use with default option boxedsections
 
 %\definecolor{SectionCol}{rgb}{0,0,0.5}
-% uncomment for dark blue \section text 
+% uncomment for dark blue \section text
 
 \newcommand{\ud}[1]{{#1^{\dagger}}}
    \newcommand{\bra}[1]{\left\langle #1\right|}
@@ -28,7 +28,7 @@
    \newcommand\Tr{\mathrm{Tr}}
    \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
    \newcommand{\avg}[1]{\left< #1 \right>}
-   
+
 
 
 
@@ -37,7 +37,7 @@
 
 % Note: only give author names, not institute
 \author{Lei Ma}
- 
+
 % insert correct institute name
 \institute{Department of Physics and Astronomy,\\
            University of New Mexico\\}
@@ -51,8 +51,8 @@
 %\leftlogo[0.9]{logoWenI}{  % defines logo to left of title (with scale factor)
 %\rightlogo[0.52]{RuGlogo}  % same but on right
 
-% NOTE: This will require presence of files logoWenI.eps and RuGlogo.eps, 
-% or other supported format in the current directory  
+% NOTE: This will require presence of files logoWenI.eps and RuGlogo.eps,
+% or other supported format in the current directory
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Begin of Document
 
@@ -63,8 +63,8 @@
 
 \conference{{\bf 2015-11-10}}
 
-%\LEFTSIDEfootlogo  
-% Uncomment to put footer logo on left side, and 
+%\LEFTSIDEfootlogo
+% Uncomment to put footer logo on left side, and
 % conference name on right side of footer
 
 % Some examples of caption control (remove % to check result)
@@ -96,6 +96,9 @@
 \begin{equation}
 1\mathrm{fm}\times 197\mathrm{MeV}=\hbar c = 1.
 \end{equation}
+
+As a reference, $1 \mathrm{GeV} =& 5.08 \times 10^{15} \mathrm {m^{-1}}$.
+
 \item For light, energy 1eV corresponds to wavelength $1.24\mathrm{\mu m}$.
 \item Pauli matrices are
 \begin{equation}
@@ -118,7 +121,7 @@
 
 \begin{enumerate}
     \item Are the dimensions correct?
-    \item Does the limits of the result make sense?
+    \item Do the limits of the result make sense?
     \item Does the result make sense when the complexity of the system is removed?
     \item Is it the right basis to draw a conclusion?
     \item Have you double checked analytical expression with other people or Mathematica?
@@ -161,6 +164,14 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 
 \subsection{Fundamental Parameters}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{assets/neutrino-mass-theta23.png}
+\caption{Neutrino mass hierarchy. Mena, O., \& Parke, S. (2004). Unified graphical summary of neutrino mixing parameters. Physical Review D, 69(11), 117301.}
+\label{fig:neutrino_mass_hierarchy}
+\end{figure}
+
+
 \begin{enumerate}
 \item Mixing angles
 \begin{align}
@@ -170,21 +181,19 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 \end{align}
 \item Masses (fig \ref{fig:neutrino_mass_hierarchy})
 \begin{align}
-\Delta m_{12}^2 &= \Delta m_{sol}^2 = 7.53_{-0.18}^{+0.18} \times 10^{-5} \mathrm{eV}^2 \\
-\lvert\Delta m_{31}^2\rvert & = \Delta m_{atm}^2 = 2.44_{-0.06}^{+0.06}\times 10^{-3} \mathrm{eV^2}
+\Delta m_{12}^2 &= \Delta m_{\mathrm{sol}}^2 = 7.53_{-0.18}^{+0.18} \times 10^{-5} \mathrm{eV}^2 \\
+\lvert\Delta m_{31}^2\rvert & = \Delta m_{\mathrm{atm}}^2 = 2.44_{-0.06}^{+0.06}\times 10^{-3} \mathrm{eV^2} (\text{NH})
 \end{align}
-
+\item Typical oscillation frequencies
+\begin{align}
+   \omega_{v,21}=& \frac{\Delta m^2_{21}}{2E} = 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} \\
+   \omega_{v,32} = & \frac{\Delta m^2_{32}}{2E} = 6.3\times 10^{-3} \mathrm{m}^{-1}  \frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \frac{1\mathrm{MeV}}{E}.
+\end{align}
 \end{enumerate}
 
 
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\columnwidth]{assets/neutrino-mass-theta23.png}
-\caption{Neutrino mass hierarchy. Mena, O., \& Parke, S. (2004). Unified graphical summary of neutrino mixing parameters. Physical Review D, 69(11), 117301.}
-\label{fig:neutrino_mass_hierarchy}
-\end{figure}
 
 
 
@@ -204,38 +213,38 @@ i\hbar \gamma^\mu \partial_\mu \psi - m c \psi = 0
 
 \begin{table}[ht]
 \centering
- \begin{tabular}{|c | c | c|} 
+\caption{Neutrino related nuclear or leptonic reactions}
+ \begin{tabular}{|c | c | c|}
  \hline
- Reaction & Equation & Boson   \\ [0.5ex] 
+ Reaction & Equation & Boson   \\ [0.5ex]
  \hline
- Electron emission & ${}^A_Z X \to {}^A_{Z+1}X + e^- +\bar \nu_e$ & $W$  \\ 
+ Electron emission & ${}^A_Z X \to {}^A_{Z+1}X + e^- +\bar \nu_e$ & $W$  \\
  Positron emission & ${}^A_Z X \to {}^A_{Z-1}X + e^+ + \nu_e$ & $W$  \\
  Electron capture & ${}^A_Z X + e^- \to {}^A_{Z-1}X  + \nu_e$ &  $W$ \\
  Positron capture & ${}^A_Z X + e^+ \to {}^A_{Z+1}X  + \bar\nu_e$ &  $W$ \\
- [0.5ex] 
+ [0.5ex]
  \hline
 
  Electron annihilation &  $e^- + e^+  \to \nu_e + \bar\nu_e $  & $W$ \\
  Electron annihilation &  $e^- + e^+  \to \nu + \bar\nu $  & $Z$ \\
- [0.5ex] 
+ [0.5ex]
  \hline
 
   Neutrino capture & ${}^A_{Z}X + \overset{(-)}{\nu_e} \to {}^A_{Z\mp 1}X + e^\pm $ & W\\
-  [1ex] 
+  [1ex]
  \hline
  $e^-\nu$ scattering & $e^- + \overset{(-)}{\nu_e} \to e^- + \overset{(-)}{\nu_e} $ &  $W$ \\
  $e^-\nu$ scattering & $e^{\pm} + \overset{(-)}{\nu_e} \to e^{\pm} + \overset{(-)}{\nu_e} $ &  $Z$ \\
  Neutrino scattering & $ {}^A_Z X + \overset{(-)}{\nu} \to {}^A_Z X + \overset{(-)}{\nu} $ &  Z\\
- [0.5ex] 
+ [0.5ex]
  \hline
- 
+
  Bremsstrahlung & $N+N\rightleftharpoons N+N + \nu + \bar\nu$ & \\
  Annihilation & $e^+e^- \rightleftharpoons \nu + \bar \nu$   & \\
  Neutrino annihilation & $\nu + \bar \nu  \rightleftharpoons \nu + \bar \nu $   &  \\
- [0.5ex] 
+ [0.5ex]
  \hline
  \end{tabular}
- \caption{Neutrino related nuclear or leptonic reactions}
 \label{table:Neutrino_Reactions}
 \end{table}
 
@@ -256,7 +265,7 @@ The two basis are related to each other through a unitary matrix $\mathbf{U}$,
      \begin{pmatrix}
      \ket{\nu_e} \\
      \ket{\nu_x}
-     \end{pmatrix} = 
+     \end{pmatrix} =
      \mathbf{U}
      \begin{pmatrix}
      \ket{\nu_1} \\
@@ -280,7 +289,7 @@ One thing to notice is that the relation of the amplitude has the same transform
      \begin{pmatrix}
      \psi_e \\
      \psi_x
-     \end{pmatrix} = 
+     \end{pmatrix} =
      \mathbf{U}
      \begin{pmatrix}
      \psi_1 \\
@@ -288,7 +297,7 @@ One thing to notice is that the relation of the amplitude has the same transform
      \end{pmatrix},
 \end{equation}
 
-where the amplitude is define as the components of a state in a certain basis. 
+where the amplitude is define as the components of a state in a certain basis.
 
 \begin{equation}
      \ket{\Psi} = \begin{pmatrix}
@@ -443,4 +452,3 @@ Check the code step by step:
 \end{multicols}
 
 \end{document}
-
